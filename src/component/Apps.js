@@ -14,7 +14,8 @@ function Apps(){
         [{id:1,ready:true,data:0},
         {id:2,ready:true,data:0},
         {id:3,ready:true,data:0},
-        {id:4,ready:true,data:0}]);
+        //{id:4,ready:true,data:0}
+    ]);
 
    
     const[total]= useState(0);
