@@ -1,23 +1,51 @@
 import React, { useState,createContext,useContext,Fragment,useCallback, useMemo } from 'react';
 import '../index.css';
 import Button from '@mui/material/Button';
-
+import ReactiveButton from 'reactive-button';
 
 
 
 const UserContext= createContext(null);
+var savefirstcolor = false;
+var color;
 
 function Apps(){
-    
-    
+
+
+  const [state, setState] = useState('idle');
+
+  const onClickHandler = () => {
+    setState('loading');
+
+    // send an HTTP request
+    setTimeout(() => {
+      setState('success');
+    }, 2000);
+  };
+
+ 
+
+  
     const[ numbers,setNumber] =useState(
         [{id:1,ready:true,data:0},
         {id:2,ready:true,data:0},
         {id:3,ready:true,data:0},
-        //{id:4,ready:true,data:0}
+        {id:4,ready:true,data:0}
     ]);
+    var randomColor = require('randomcolor')
 
-   
+    if(!savefirstcolor)
+        {
+            color= randomColor({
+            hue: 'green',
+            luminosity: 'light',
+            alpha:'0.3'
+        }
+        );
+        savefirstcolor=true;
+    }
+    
+
     const[total]= useState(0);
          //   console.log(props.children);
          //   const element = document.getElementById(props.children);
@@ -48,23 +76,23 @@ function Apps(){
                 ))
         })
         
+        
     
-
-
+    
+        
         return(
-        <div className="body1">
+        <div>
+
+        <div className="body1" style={{backgroundColor: color}} >
             <div>
                 
             <UserContext.Provider value={[numbers,setNumber]}>
                 <Menu setAllZero={setAllZero} reset={reset}/>
             </UserContext.Provider>
-            <Button variant="contained">Hello World</Button>;
-            </div>
+            
+             </div>
             <div>
             
-  
-            
-                
                 {numbers.map((number,index)=>{
                 return(
                 <div id= {number.id} key={index} className="MenuItem">
@@ -74,10 +102,17 @@ function Apps(){
                     </UserContext.Provider>
                 </div>    
                 )})}
+                
             </div>
-                    
+            <ReactiveButton
+                buttonState={state}
+                idleText="Add to Cart"
+                loadingText="Loading"
+                successText="Done"
+                onClick={onClickHandler}
+                size="small"/>
         </div>
-        
+        </div>
     );
      
 }
@@ -173,6 +208,7 @@ function Menu({setAllZero,reset}){
             {<img src={require('../img/reset.png')} alt="reset" />}
             </button>
             <br />
+            
         </div>
     );
     }
