@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import React, { useState,createContext,useContext,Fragment,useCallback, useMemo } from 'react';
-//import './index.css'
+import './index.css'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -253,7 +253,7 @@ function MenuItem1({index}){
   {ZeroWord}
   </button>
   <button className= {Add} onClick={increaseGoods}>
-  {<img src={require('../addition.png')} alt="+" />}
+  {<img src='./img/addition.png' alt="+" />}
   </button>
   <button  className={subtraction} onClick={decreaseGoods}>
   {<img src={require('./img/subtraction.png')} alt="-" />}
