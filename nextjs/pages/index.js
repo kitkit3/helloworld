@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-//import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 import React, { useState,createContext,useContext,Fragment,useCallback, useMemo } from 'react';
-import './index.css'
+
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -253,13 +253,25 @@ function MenuItem1({index}){
   {ZeroWord}
   </button>
   <button className= {Add} onClick={increaseGoods}>
-  {<img src='./img/addition.png' alt="+" />}
+     <Image
+        src={require('./img/addition.png')}  alt="+"
+        width={400} height={400}
+        priority={true}
+      />
   </button>
   <button  className={subtraction} onClick={decreaseGoods}>
-  {<img src={require('./img/subtraction.png')} alt="-" />}
+  <Image
+        src={require('./img/subtraction.png')}  alt="-"
+        width={300} height={300}
+        priority={true}
+      />
   </button>
   <button className="recyclebinbutton" onClick={deleteRow}>
-  {<img src={require('./img/recyclebin.png')} alt="" />}
+    <Image
+        src={require('./img/recyclebin.png')}  alt=" "
+        width={300} height={300}
+        priority={true}
+      />
   </button>
   </Fragment>);
   //<li>{props.children}</li>;
@@ -281,15 +293,29 @@ function Menu({setAllZero,reset}){
   return(
       <div >
       <h1>Wecome to HKCalebMall</h1>
-      <div><img className="shoppingcart" src={require('./img/shopping_cart.png')} alt="cart" />
+      <div>
+      <Image
+      className="shoppingcart"
+        src={require('./img/shopping_cart.png')}  alt="cart"
+        width={300} height={300}
+        priority={true}
+      />
       <button id="total">{total}</button>
       <font >item</font>
       </div>
           <button className={"setZerobutton"} onClick={setAllZero}>
-          {<img src={require('./img/setzero.png')} alt="Zero" />}
+          <Image
+          src={require('./img/setzero.png')}  alt="0"
+        width={300} height={300}
+        priority={true}
+           />
           </button>
           <button className={"resetbuttonlock"} onClick={reset}>
-          {<img src={require('./img/reset.png')} alt="reset" />}
+          <Image
+          src={require('./img/reset.png')}  alt="0"
+            width={300} height={300}
+          priority={true}
+            />
           </button>
           <br />
           
