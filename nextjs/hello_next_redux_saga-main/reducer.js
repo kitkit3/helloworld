@@ -31,14 +31,14 @@ function reducer(state = initialState, action) {
     case actionTypes.INCREMENT:
       return {
         ...state,
-        ...{ value:state.count  + 1 },
+        ...{ count:state.count  + 1 },
         
       }
 
     case actionTypes.DECREMENT:
       return {
         ...state,
-        ...{ value: state.count - 1 },
+        ...{ count: state.count - 1 },
       }
 
     case actionTypes.RESET:

@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { useSelector } from 'react-redux'
 
-import Counter from './counter'
+import Counter from './counter(old)'
 import Clock from './clock'
+
 
 function Page({ linkTo, NavigateTo, title }) {
   const placeholderData = useSelector((state) => state.placeholderData)
