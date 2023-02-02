@@ -4,6 +4,7 @@ import { increment, decrement, reset } from '../actions'
 
 const Counter = () => {
   const count = useSelector((state) => state.count)
+  const counterList =useSelector((state) =>state.counterList) 
   const dispatch = useDispatch()
 
   return (
@@ -18,17 +19,25 @@ const Counter = () => {
       </h1>
       <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>*/
+      <button onClick={() => dispatch(reset())}>Reset</button>
       
       <div>
-      {/*counters.map(counter =>
-        <Counter
-         key = {counter.id}
+      {counterList.map(counter =>
+      <Counter />
+       /* <Counter
+         key = {counterList.id}
       //  onDelete = {onDelete}
       //  onIncrement = {onIncrement}
       //  onDecrement = {onDecrement}
-        counter = {counter}
-      />)*/}
+        counter = {counterList.value}
+
+      />
+      <div>
+      <button onClick={() => dispatch(increment())}>+1</button>
+      <button onClick={() => dispatch(decrement())}>-1</button>
+      <button onClick={() => dispatch(reset())}>Reset</button>
+      </div>*/)
+    }
         
        
       </div>

@@ -17,9 +17,9 @@ class Counter extends React.Component {
         className="delete"> <i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>*/
       <div>
-      <h1>
+      {/*<h1>
         Count: <span>{count}</span>
-      </h1>
+  </h1>*/}
       <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
       <button onClick={() => dispatch(reset())}>Reset</button>
