@@ -7,12 +7,12 @@ const initialState = {
   lastUpdate: 0,
   light: false,
   placeholderData: null,
-  counters : [
+  counterList : [
     {id : 1, value : 0},
     {id : 2, value : 0},
     {id : 3, value : 0},
     {id : 4, value : 0},
-    {id : 5, value : 0}
+
   ]
 }
 
@@ -31,13 +31,14 @@ function reducer(state = initialState, action) {
     case actionTypes.INCREMENT:
       return {
         ...state,
-        ...{ count: state.count + 1 },
+        ...{ value:state.counterList[1].value  + 1 },
+        
       }
 
     case actionTypes.DECREMENT:
       return {
         ...state,
-        ...{ count: state.count - 1 },
+        ...{ value: state.counterList[1].value - 1 },
       }
 
     case actionTypes.RESET:
