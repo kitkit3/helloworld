@@ -7,6 +7,13 @@ const initialState = {
   lastUpdate: 0,
   light: false,
   placeholderData: null,
+  counters : [
+    {id : 1, value : 0},
+    {id : 2, value : 0},
+    {id : 3, value : 0},
+    {id : 4, value : 0},
+    {id : 5, value : 0}
+  ]
 }
 
 function reducer(state = initialState, action) {

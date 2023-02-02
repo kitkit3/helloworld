@@ -14,6 +14,7 @@ function Page({ linkTo, NavigateTo, title }) {
       <h1>{title}</h1>
       <Clock lastUpdate={lastUpdate} light={light} />
       <Counter />
+      
       <nav>
         <Link href={linkTo}>Navigate:{NavigateTo}</Link>
       </nav>
