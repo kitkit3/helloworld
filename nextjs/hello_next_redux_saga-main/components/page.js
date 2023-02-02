@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useSelector } from 'react-redux'
 
-import Counter from './counter(old)'
+import Counter from './counterItem'
 import Clock from './clock'
 
 

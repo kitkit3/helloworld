@@ -1,10 +1,12 @@
+
+
 import React from 'react';
 import './counters.css'
 // import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 class Counter extends React.Component {
   render(){
-    return(
+    return(/*
       <div className='button-box2'>
       <span className = {this.getBadgeClasses()} class ="show">{this.formatCount()}</span>
       <button onClick = {() => this.props.onIncrement(this.props.counter)}
@@ -13,8 +15,15 @@ class Counter extends React.Component {
       className = "Mbutton">-</button>
       <button onClick = {() => this.props.onDelete(this.props.counter.id)}
         className="delete"> <i class="fa fa-trash" aria-hidden="true"></i></button>
+      </div>*/
+      <div>
+      <h1>
+        Count: <span>{count}</span>
+      </h1>
+      <button onClick={() => dispatch(increment())}>+1</button>
+      <button onClick={() => dispatch(decrement())}>-1</button>
+      <button onClick={() => dispatch(reset())}>Reset</button>
       </div>
-
     );
   }
   

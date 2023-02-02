@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './counter(old)';
+import Counter from './counterItem';
 //import './counters.css'
 // import { faRecycle } from "@fortawesome/free-solid-svg-icons";
 // import { faRedo } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,7 @@ class Counters extends React.Component{
   }
   render(){
    // const {onReset,counters,onDelete,onIncrement,onDecrement} = this.props;
-  
+    const{counters}=this.props;
     return(
       <div>
        {counters.map(counter =>

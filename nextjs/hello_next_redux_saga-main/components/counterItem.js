@@ -18,9 +18,23 @@ const Counter = () => {
       </h1>
       <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
+      <button onClick={() => dispatch(reset())}>Reset</button>*/
       
+      <div>
+      {/*counters.map(counter =>
+        <Counter
+         key = {counter.id}
+      //  onDelete = {onDelete}
+      //  onIncrement = {onIncrement}
+      //  onDecrement = {onDecrement}
+        counter = {counter}
+      />)*/}
+        
+       
+      </div>
+
     </div>
+    
   )
 }
 
