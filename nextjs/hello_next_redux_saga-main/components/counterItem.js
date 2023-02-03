@@ -2,7 +2,9 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { increment, decrement, reset } from '../actions'
 
-const Counter = () => {
+import Counter from './counter'
+
+const CounterItem = () => {
   const count = useSelector((state) => state.count)
   const counterList =useSelector((state) =>state.counterList) 
   const dispatch = useDispatch()
@@ -22,21 +24,20 @@ const Counter = () => {
       <button onClick={() => dispatch(reset())}>Reset</button>
       
       <div>
-      {counterList.map(counter =>
-      <Counter />
-       /* <Counter
-         key = {counterList.id}
+      {counterList.map(counter=>
+        <Counter/>
+      //   key = {counterList.id}
       //  onDelete = {onDelete}
       //  onIncrement = {onIncrement}
       //  onDecrement = {onDecrement}
-        counter = {counterList.value}
-
-      />
-      <div>
+      //  counter = {counterList.value}
+      ///>
+    
+      /*<div>
       <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
-      </div>*/)
+      <button onClick={() => dispatch(reset())}>Reset</button>*/
+      )
     }
         
        
@@ -47,4 +48,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default CounterItem
