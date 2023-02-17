@@ -8,15 +8,15 @@ import Page from '../components/page'
 const Index = () => {
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(startClock())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(startClock())
+  // }, [dispatch])
 
   return <Page title="Index Page" linkTo="/other" NavigateTo="Other Page" />
 }
 
 export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
-  store.dispatch(tickClock(false))
+  // store.dispatch(tickClock(false))
 
   if (!store.getState().placeholderData) {
     store.dispatch(loadData())

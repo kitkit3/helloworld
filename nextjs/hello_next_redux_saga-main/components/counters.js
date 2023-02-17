@@ -8,9 +8,9 @@ import Counter from './counterItem';
 
 class Counters extends React.Component{
 
-  refreshPage() {
-    window.location.reload();
-  }
+  //refreshPage() {
+    //window.location.reload();
+  //}
   render(){
    // const {onReset,counters,onDelete,onIncrement,onDecrement} = this.props;
     const{counters}=this.props;
@@ -24,8 +24,6 @@ class Counters extends React.Component{
       //  onDecrement = {onDecrement}
         counter = {counter}
         />)}
-        
-       
       </div>
     );
   }

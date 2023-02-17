@@ -2,6 +2,9 @@ export const actionTypes = {
   FAILURE: 'FAILURE',
   INCREMENT: 'INCREMENT',
   DECREMENT: 'DECREMENT',
+  INCREMENTITEM:'INCREMENTITEM',
+  DECREMENTITEM: 'DECREMENTITEM',
+  RESETITEM: 'RESETITEM',
   RESET: 'RESET',
   LOAD_DATA: 'LOAD_DATA',
   LOAD_DATA_SUCCESS: 'LOAD_DATA_SUCCESS',
@@ -28,9 +31,26 @@ export function decrement() {
 export function reset() {
   return { type: actionTypes.RESET }
 }
+export function resetItem(counter1) {
+  return { type: actionTypes.RESETITEM,
+    counter:counter1,
+    }
+}
+export function incrementItem(counter1) {
+  return { type: actionTypes.INCREMENTITEM,
+  counter:counter1, 
+  }
+}
+
+export function decrementItem(counter1) {
+  return { type: actionTypes.DECREMENTITEM,
+  counter:counter1, 
+  }
+}
 
 export function loadData() {
-  return { type: actionTypes.LOAD_DATA }
+  return { type: actionTypes.LOAD_DATA,
+  }
 }
 
 export function loadDataSuccess(data) {

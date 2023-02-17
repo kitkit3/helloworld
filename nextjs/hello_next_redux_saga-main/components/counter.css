@@ -1,0 +1,10 @@
+.span
+{
+  background-color: rgb(255, 234, 0);
+  font-weight:bolder;
+  font-size: 20px;
+  border-style:solid;
+  border-color:  rgb(167, 209, 160);
+	border-width:5px;
+  border-radius: 10px;
+}
