@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement, reset, incrementItem, decrementItem, resetItem } from '../actions'
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
+import './counter.css';
+
 // import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Counter = (props) => {
@@ -27,7 +29,7 @@ const Counter = (props) => {
       return (
       <div>
       
-      {<span color='yellow'>{ count.value==0?'zero':count.value}</span>}
+      {<span>{ count.value==0?'zero':count.value}</span>}
       <AwesomeButton onPress={() => dispatch(incrementItem(count))} type="primary"> +1</AwesomeButton>
       <AwesomeButton onPress={() =>{if(count.value>0)dispatch(decrementItem(count))}}>-1</AwesomeButton>
       <AwesomeButton onPress={() => dispatch(resetItem(count))}type="danger" >Reset</AwesomeButton>
