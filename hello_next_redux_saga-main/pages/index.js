@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { END } from 'redux-saga'
 import { wrapper } from '../store'
 import { loadData, startClock, tickClock } from '../actions'
-import Page from '../components/page'
+//import Page from '../components/page'
 
 const Index = () => {
   const dispatch = useDispatch()
