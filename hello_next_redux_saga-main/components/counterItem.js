@@ -9,8 +9,20 @@ const CounterItem = () => {
   const counters =useSelector((state) =>state.counters) 
   const dispatch = useDispatch()
 
-  const count = counters.filter(counters => counters.value > 0).length;
+  console.log("ACTION"+JSON.stringify(counters))
 
+  
+  const arr = counters || [];
+
+  const count = arr.filter((counters) => counters.value > 0).length;
+  
+  {counters && counters.map(counter => <Counter key={counter.id} id={counter.id} />)}
+      
+  // Using an if check
+  if (!counters) {
+      return null
+  }
+  
 
   return (
    /* <div>
@@ -26,30 +38,20 @@ const CounterItem = () => {
       <button onClick={() => dispatch(decrement())}>-1</button>
       <button onClick={() => dispatch(reset())}>Reset</button>
          */
+      
+
+      // Here post will not be undefined anymore
+
+   
+
     <div>
         <h1>
         total: <span>{count}</span>
       </h1>
       <div>
-  
-      {counters.map(counter=>
-       
-        <Counter key={counter.id} id={counter.id}/>
-        
-      //   key = {counterList.id}
-      //  onDelete = {onDelete}
-      //  onIncrement = {onIncrement}
-      //  onDecrement = {onDecrement}
-      //  counter = {counterList.value}
-      ///>
-    
-      /*<div>
-      <button onClick={() => dispatch(increment())}>+1</button>
-      <button onClick={() => dispatch(decrement())}>-1</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>*/
-      )
-    }
-        
+      
+
+              {counters.map(counter=><Counter key={counter.id} id={counter.id}/>)}
        
       </div>
 

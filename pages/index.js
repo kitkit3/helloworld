@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { END } from 'redux-saga'
-import { wrapper } from '../store'
-import { loadData, startClock, tickClock } from '../actions'
+import { wrapper } from '../hello_next_redux_saga-main/store'
+import { loadData, startClock, tickClock } from '../hello_next_redux_saga-main/actions'
 import Page from '../hello_next_redux_saga-main/components/page'
 
 const Index = () => {
