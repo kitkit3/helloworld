@@ -24,7 +24,7 @@ const Counter = (props) => {
         className="delete"> <i class="fa fa-trash" aria-hidden="true"></i></button>
       </div>*/
 
-      console.log('rendering counter: ', props.id)
+      console.log("button"+JSON.stringify(counters))
       return (
       <div>
       <style jsx>{`
