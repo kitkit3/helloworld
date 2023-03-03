@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement, reset, incrementItem, decrementItem, resetItem } from '../actions'
+import { increment, decrement, reset, incrementItem, decrementItem, resetItem } from '../folder/actions'
+
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 

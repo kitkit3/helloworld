@@ -1,4 +1,4 @@
-import { wrapper } from '../hello_next_redux_saga-main/store'
+import { wrapper } from '../folder/store'
 
 function App({ Component, pageProps }) {
   return <Component {...pageProps} />
